@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider-box{
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: center;
+}
+.arrow{
+    flex: 0 1 auto;
+    padding: 5px 8px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-slider{
+    flex: 1 1 auto;
+    padding: 5px 8px;
+    min-height: 300px;
+    position: relative;
+}
+.controller{
+    position: absolute;
+    margin: auto;
+    background-color: aqua;
+    padding: 5px 8px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
