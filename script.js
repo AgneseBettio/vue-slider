@@ -7,10 +7,44 @@ const app = new Vue({
 
     data: {
 
-        imgSrc : "https://picsum.photos/200",
-        imagines : [{},{},{},{}],
-    },
-    methods: {
+        activeImage: 0,
 
+        petImages: [
+            {
+                imgPath: 'img/boxer.jpg',
+                description: 'Boxer'
+            },
+            {
+                imgPath: 'img/frenchbuldog.jpg',
+                description: 'FrenchBulldog'
+            },
+            {
+                imgPath: 'img/jackrussel.jpg',
+                description: "JackRussel"
+            },
+            {
+                imgPath: 'img/labrador.jpg',
+                description: 'Labrador'
+            }
+        ],
+    },
+    methods : {
+        nextImg(){
+            if (this.activeImage >= this.petImages.length -1){
+                this.activeImage = 0;
+            } else {
+            this.activeImage ++
+            }
+        },
+        prevImg(){
+            if (this.activeImage <= 0 ){
+                this.activeImage = this.petImages.length  -1;
+            } else {
+            this.activeImage --
+            }
+        },
+        onDotClick(index){
+           this.activeImage = index;
+        }
     }
 })
