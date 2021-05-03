@@ -64,6 +64,9 @@ span.dot{
     margin-left: 10px;
     margin-right: 10px;    
 }
+span.active {
+    background-color: bisque;
+}
 span.dot:hover, .fa-chevron-left:hover, .fa-chevron-right:hover {
     cursor: pointer;
 }

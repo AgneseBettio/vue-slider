@@ -21,7 +21,7 @@
 
             </div>
             <div class="main-slider">
-                <div class="img-box" v-show="activeImage === index" v-for="(element, index) in petImages">
+                <div class="img-box" v-show="activeImage === index"  v-for="(element, index) in petImages">
                     <img :src="element.imgPath" alt="element.description">
                 </div>
                 <div class="controller">
